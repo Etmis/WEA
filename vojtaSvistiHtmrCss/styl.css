@@ -41,3 +41,39 @@ header {
     font-size: 24px; /* adjust font size */
     float:left;
 }
+.nigar {
+
+    vertical-align: middle; /* align title vertically with link */
+    font-size: 34px; /* adjust font size */
+    width: 50%; /* Set the width of the div */
+    margin: 0 auto; /* Set margin to auto on left and right sides */
+    text-align: center;
+}
+table {
+    width: 100%; /* Set table width to 100% of its container */
+    border-collapse: collapse; /* Collapse border spacing */
+    margin-top: 20px
+}
+th, td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding to table cells */
+    text-align: left; /* Align text to the left within cells */
+}
+th {
+    background-color: #007bff; /* Background color for table header */
+}
+.button-cell {
+    
+    text-align: center; /* Center align content */
+}
+.button {
+    display: inline-block;
+    width: 40px; /* Set width of the buttons */
+    height: 40px; /* Set height of the buttons */
+    margin: 0 5px; /* Add margin for spacing between buttons */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
