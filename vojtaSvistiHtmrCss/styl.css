@@ -64,11 +64,12 @@ th {
 }
 .button-cell {
     
-    text-align: center; /* Center align content */
+    text-align: center;
+    width: 30%; /* Center align content */
 }
 .button {
     display: inline-block;
-    width: 40px; /* Set width of the buttons */
+    width: 80px; /* Set width of the buttons */
     height: 40px; /* Set height of the buttons */
     margin: 0 5px; /* Add margin for spacing between buttons */
     background-color: #007bff; /* Button background color */
