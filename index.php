@@ -20,6 +20,9 @@ session_start();
     
 
 <?php
+
+
+
 $servers = [];
 $mysqli = new mysqli('localhost', 'root', '', 'WEA');
 if ($mysqli->connect_error) {
@@ -29,6 +32,7 @@ $queryServers = $mysqli->query("SELECT * FROM `server`");
 while ($server = $queryServers->fetch_assoc()) {
     $servers[] = new server($server["id"], $server["name"], $server["ip"], $server["port"], $server["password"]);
 }
+$mysqli->close();
 
 if (count($servers) > 0 ) {
     echo "<div class='nigar'>Your saved Servers</div>
@@ -50,8 +54,7 @@ foreach ($servers as $server) {
 }
 if (count($servers) > 0 ) {
     echo
-    "
-    </div>";
+    "</div>";
 }
 
 $mysqli->close();

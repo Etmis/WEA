@@ -16,5 +16,7 @@ $deleteQuery->bind_param('i', $serverId);
 $deleteQuery->execute();
 $mysqli->close();
 
+$deleteQuery->close();
+$mysqli->close();
 header("location: index.php");
 die();

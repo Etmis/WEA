@@ -15,7 +15,7 @@
     <div class="login form">
       <header>Login</header>
       <form action="login.php">
-        <input type="text" placeholder="Enter your email">
+        <input type="text" placeholder="Enter your username">
         <input type="password" placeholder="Enter your password">
         <input type="button" class="button" value="Login">
       </form>
