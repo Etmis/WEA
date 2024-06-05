@@ -1,22 +1,20 @@
 <?php
 session_start();
 
-// Connect to database
 $mysqli = new mysqli('localhost', 'root', '', 'WEA');
 if ($mysqli->connect_error) {
     die("Error connecting to database: " . $mysqli->connect_error);
 }
 
-// Get server ID from URL parameter
 $serverId = $_GET['serverId'];
+$user_id = $_SESSION['user_id'];
 
-// Prepare and execute delete query
-$deleteQuery = $mysqli->prepare("DELETE FROM `server` WHERE `id` = ?");
-$deleteQuery->bind_param('i', $serverId);
-$deleteQuery->execute();
+$stmt = $mysqli->prepare("DELETE FROM `server` WHERE `id` = ? AND `fk_user_id` = ?");
+$stmt->bind_param('ii', $serverId, $user_id);
+$stmt->execute();
+
+$stmt->close();
 $mysqli->close();
 
-$deleteQuery->close();
-$mysqli->close();
 header("location: index.php");
-die();
+exit();

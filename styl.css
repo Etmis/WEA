@@ -1,46 +1,35 @@
 
 
-
-
 button{
     background-color: transparent;
 
 
 }
-.a {
-    text-decoration: none;
-    color: #333; /* default color */
-    font-weight: bold;
-    padding: 8px 16px; /* add padding for space around text */
-    border: 2px solid #007bff; /* add border with solid style and blue color */
-    border-radius: 4px; /* add border radius for rounded corners */
-    transition: border-color 0.3s ease, color 0.3s ease; /* add transition effect for border color and text color */
-    margin-left: 5px;
-    margin-right: 5px;
-    display: inline-block;
-    font-size: 18px; /* adjust font size */
-}
-
-.a:hover {
-    border-color: #0056b3; /* change border color on hover */
-    color: #0056b3; /* change text color on hover */
-}
 
 header {
-    margin-top: 20px;
-    height: 40px;
-    padding-bottom: 10px; /* add padding at the bottom */
-    border-bottom: 2px solid #0056b3; /* add line below the header */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* add shadow for a better look */
-    text-align: right; /* align items to the right */
+  display: flex;
+  justify-content: center; /* Zarovnání obsahu na střed vodorovně */
+  align-items: center; /* Zarovnání obsahu na střed svisle */
+  height: 80px; /* Nastavení výšky záhlaví */
+  background-color: #007000; /* Barva pozadí záhlaví */
+  color: #fff; /* Barva textu */
 }
 
 .title {
-    display: inline-block;
-    vertical-align: middle; /* align title vertically with link */
-    font-size: 24px; /* adjust font size */
-    float:left;
+  margin-right: auto; /* Zarovnání titulku vlevo */
+  padding-left: 20px; /* Odsazení titulku zleva */
+  font-size: 50px;
+  font-weight: 600;
+  background-image: linear-gradient(#0044ff, #00fff2, #d9f00c, #17eb5d);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
+
+a:hover {
+  color: #f8f9fa; /* Barva textu odkazů po najetí myší */
+}
+
 .nigar {
 
     vertical-align: middle; /* align title vertically with link */
@@ -60,7 +49,7 @@ th, td {
     text-align: left; /* Align text to the left within cells */
 }
 th {
-    background-color: #007bff; /* Background color for table header */
+    background-color: #1eff00; /* Background color for table header */
 }
 .button-cell {
     
@@ -71,9 +60,115 @@ th {
     width: 40px; /* Set width of the buttons */
     height: 40px; /* Set height of the buttons */
     margin: 0 5px; /* Add margin for spacing between buttons */
-    background-color: #007bff; /* Button background color */
+    background-color: #15ff00; /* Button background color */
     color: #fff; /* Button text color */
     border: none; /* Remove button border */
     border-radius: 4px; /* Add border radius for rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.checkmark {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+.modal-body {
+  display: block;
+  margin: 0 auto;
+}
+
+.button-58 {
+  align-items: center;
+  background-color: rgb(0, 255, 76);
+  border: 2px solid rgba(20, 122, 0, 0.466);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #007410;
+  border-color: #3cff00;
+  fill: rgb(0, 201, 27);
+}
+
+.button-58:active {
+  background-color: #046819;
+  border-color: #00ff4c;
+  fill: rgb(0, 104, 22);
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
 }
